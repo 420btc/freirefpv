@@ -6,6 +6,9 @@
 [build.environment]
   PYTHON_VERSION = "3.9"
 
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
