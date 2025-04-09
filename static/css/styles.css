@@ -224,6 +224,7 @@ body {
 .logo-text {
     background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     margin-left: var(--spacing-2);
@@ -380,6 +381,7 @@ body {
     text-transform: uppercase;
     background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1514,7 +1516,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 50px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -1524,6 +1526,16 @@ body {
 .service-areas li:hover {
     color: var(--color-accent);
     transform: translateX(5px);
+}
+
+/* Estilo específico para el primer banner (Zonas de Servicio) */
+.map-wrapper .service-areas:nth-of-type(1) {
+    margin-top: 20px; /* Ajustar para que quede al ras del mapa */
+}
+
+/* Estilo específico para el segundo banner (Información Meteorológica) */
+.map-wrapper .service-areas:nth-of-type(2) {
+    margin-top: -40px; /* Ajustado para mantener la alineación con el primer banner */
 }
 
 /* ===== FAQ SECTION ===== */
@@ -1811,6 +1823,7 @@ footer {
     font-weight: 700;
     background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
