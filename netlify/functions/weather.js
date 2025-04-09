@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
     // Coordenadas de Málaga
     const lat = 36.72;
     const lon = -4.42;
-    const apiKey = "5ae0c9a3137234e18e032e3d6024629e"; // API key de OpenWeather
+    const apiKey = process.env.OPENWEATHER_API_KEY || "5ae0c9a3137234e18e032e3d6024629e"; // API key de OpenWeather
     
     // Obtener pronóstico usando la API OneCall 3.0
     const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${apiKey}&units=metric&lang=es`;
